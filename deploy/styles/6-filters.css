@@ -1,0 +1,125 @@
+.container {
+    max-width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+.filters {
+    height: 70px;
+    color: white;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+}
+
+.button {
+    font: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: 0;
+    border-radius: 4px;
+    margin: auto;
+    margin-right: 30px;
+}
+.button:hover {
+    opacity: 90%;
+}
+.locations {
+    height: 100%;
+    min-width: 25%;
+    border-right: 1px solid #DDDDDD;
+    color: black;
+    margin-left: 0px;
+    display: inline;
+}
+.amenities {
+    height: 100%;
+    min-width: 25%;
+    color: black;
+    margin-left: 0px;
+}
+
+
+h3 {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -12px;
+    margin-left: 50px;
+}
+.locations .popover {
+    margin-top: 1px;
+    background-color: #FAFAFA;
+    color: black;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    min-width: 12.8%;
+    min-height: 15em;
+    border: 1px solid #DDDDDD;
+
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.amenities .popover {
+    padding-top: 1.5em;
+    margin-top: 1px;
+    background-color: #FAFAFA;
+    color: black;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    min-width: 13%;
+    min-height: 6em;
+    border: 1px solid #DDDDDD;
+
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+
+/* to remove the bullets from the unordred lists */
+ul {
+    list-style: none;
+}
+
+
+
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+.locations:hover .popover {
+    display: block;
+
+}
+.amenities:hover .popover {
+    display: block;
+}
+
+.locations .popover ul li:hover {
+    background-color: #DDDDDD;
+}
+
+.amenities .popover li:hover {
+    background-color: #DDDDDD;
+}

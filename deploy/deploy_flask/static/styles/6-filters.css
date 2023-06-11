@@ -1,0 +1,195 @@
+.container {
+    background-color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.filters {
+    height: 70px;
+    color: white;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+}
+
+.button {
+    font: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: 0;
+    border-radius: 4px;
+    margin: auto;
+    margin-right: 30px;
+}
+.button:hover {
+    opacity: 90%;
+}
+.locations {
+    height: 100%;
+    min-width: 25%;
+    border-right: 1px solid #DDDDDD;
+    color: black;
+    margin-left: 0px;
+    display: inline;
+}
+.amenities {
+    height: 100%;
+    min-width: 25%;
+    color: black;
+    margin-left: 0px;
+}
+
+article>h2 {
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    padding-bottom: 10%;
+}
+
+
+h3 {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -12px;
+    margin-left: 50px;
+}
+.popover {
+    font-size: larger;
+    margin-top: 1px;
+    padding-top: 20px;
+    background-color: #FAFAFA;
+    color: black;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 21%;
+    min-width: 11.8%;
+    min-height: 15em;
+    border: 1px solid #DDDDDD;
+
+    overflow-y: scroll;
+    max-height: 300px;
+
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+.popover ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.popover li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.places h1 {
+    width: 90%;
+}
+
+
+.article {
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    display: inline-table;
+    text-align: center;
+}
+
+
+/* to remove the bullets from the unordred lists */
+ul {
+    list-style: none;
+}
+
+
+
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+.locations:hover .popover {
+    display: block;
+
+}
+.amenities:hover .popover {
+    display: block;
+}
+
+.locations .popover ul li:hover {
+    background-color: #DDDDDD;
+}
+
+.amenities .popover li:hover {
+    background-color: #DDDDDD;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding-left: 10%;
+    }
+    .container {
+        padding-left: 5%;
+        overflow-x: hidden;
+    }
+    .filters {
+        width: 90%;
+        margin: auto;
+        height: 70px;
+        color: white;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        display: flex;
+        position: relative;
+    }
+    .popover {
+        width: 23%;
+        font-size: 15px;
+        display: none;
+        overflow-x: hidden;
+        padding-left: 2%;
+    }
+    .popover ul {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: -56%;
+        text-align: center;
+    }
+    h3 {
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: 28px;
+        text-align: left;
+    }
+}

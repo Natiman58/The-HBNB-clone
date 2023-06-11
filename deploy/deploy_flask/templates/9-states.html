@@ -1,0 +1,23 @@
+<!--states.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>States</title>
+</head>
+<body>
+    {% if states is none %}
+    <h1>Not found!</h1>
+    {% else %}
+    <h1>State: {{ states.name }}</h1>
+    <h3>Cities:</h3>
+    <ul>
+        {% for city in states.cities %}
+        <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

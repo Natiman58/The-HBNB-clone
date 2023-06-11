@@ -1,0 +1,195 @@
+.container {
+    background-color: white;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.filters {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    height: 70px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.button {
+    font: 18px;
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    height: 48px;
+    width: 20%;
+    border: 0;
+    border-radius: 4px;
+    margin: auto;
+    margin-right: 30px;
+}
+.button:hover {
+    opacity: 90%;
+}
+.locations {
+    height: 100%;
+    min-width: 25%;
+    border-right: 1px solid #DDDDDD;
+    color: black;
+    margin-left: 0px;
+    display: inline;
+}
+.amenities {
+    height: 100%;
+    min-width: 25%;
+    color: black;
+    margin-left: 0px;
+}
+.popover {
+    display: none;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: absolute;
+    box-sizing: border-box;
+    width: 25%;
+    top: 100%;
+    margin-top: 0;
+    padding-left: 3%;
+
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+h3 {
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+h4 {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: -12px;
+    margin-left: 50px;
+    margin-bottom: 0%;
+}
+
+
+
+ul {
+    list-style: none; /* to remove the bullets from the unordred lists */
+    padding-left: 23px;
+}
+
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.locations:hover .popover {
+    display: block;
+
+}
+.amenities:hover .popover {
+    display: block;
+}
+
+
+/* To include all range of phones*/
+
+@media only screen and (max-width: 1030px)
+{
+    .filters {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 600px)
+{
+    .filters .locations,.filters .amenities {
+        width: 35%;
+    }
+    .filters .locations ul, .filters .amenities ul  {
+        padding: 0.7em;
+        width: 35%;
+      }
+    .filters .locations li {
+        margin: 0 0 0 5%;
+        padding: 0;
+    }
+    .popover h2 {
+        font-size: 15px;
+    }
+    .pricebynight {}
+
+}
+@media only screen and (max-width: 360px)
+{
+    .filters button {
+        font-size: 16px;
+        justify-content: center;
+        right: 8px;
+        width: 25%;
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 350px)
+{
+    .filters .locations,.filters .amenities {
+        width: 35%;
+        font-size: 0.85em;
+    }
+    .filters .locations h3,  .filters .amenities h3{
+        font-size: 1.1em;
+        margin: 2px 7px;
+    }
+    .locations h4,  .amenities h4{
+        font-weight: 400;
+        font-size: 0.9em;
+        margin: 2px 7px;
+    }
+    .filters .locations ul {
+        padding: 0.1em;
+      }
+    .filters .amenities ul {
+        padding: 0.8em;
+
+    }
+}
+@media only screen and (max-width: 280px)
+{
+    .filters button {
+        font-size: 12px;
+        width: 20%;
+        padding: 0;
+    }
+    .popover h2 {
+        font-size: 11px;
+    }
+
+}
+@media only screen and (max-width: 250px)
+{
+    .filters button {
+        font-size: 11px;
+        width: 20%;
+        padding: 0;
+    }
+    .filters .locations ul{
+        padding: 0;
+      }
+      .filters .amenities ul {
+          padding: 1em;
+      }
+}
