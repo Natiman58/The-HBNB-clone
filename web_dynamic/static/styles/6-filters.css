@@ -67,6 +67,7 @@ h4 {
     margin-top: -12px;
     margin-left: 50px;
     position: absolute;
+    width: 40%;
 }
 .popover {
     font-size: larger;
@@ -84,7 +85,7 @@ h4 {
     border: 1px solid #DDDDDD;
 
     overflow-y: scroll;
-    max-height: 300px;
+    max-height: 30px;
 
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
@@ -130,10 +131,6 @@ ul {
     list-style: none;
 }
 
-
-
-
-
 @keyframes growDown {
     0% {
         transform: scaleY(0);
@@ -164,7 +161,6 @@ ul {
     }
     .filters {
         width: 90%;
-        margin: auto;
         height: 70px;
         color: white;
         border: 1px solid #DDDDDD;
@@ -174,11 +170,14 @@ ul {
     }
     .popover {
         width: 23%;
+        height: 50%;
         font-size: 15px;
         display: none;
+        flex-direction: column;
         overflow-x: hidden;
         padding-left: 2%;
     }
+
     .popover ul {
         margin-top: 15px;
         margin-bottom: 15px;
@@ -188,7 +187,28 @@ ul {
     h3 {
         font-weight: 600;
         margin-top: 10px;
-        margin-left: 28px;
+        margin-left: 15px;
         text-align: left;
+    }
+    .amenity-checkbox {
+        position: absolute;
+        left: 0px;
+    }
+    .popover li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        margin-left: 10%;
+    }
+    .amenities .popover {
+        width: 40%;
+    }
+    h4 {
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: -12px;
+        margin-left: 20px;
+        position: absolute;
+        width: 39%;
     }
 }

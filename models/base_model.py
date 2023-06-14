@@ -64,6 +64,8 @@ class BaseModel:
             d['updated_at'] = self.updated_at.isoformat()
         if not include_password and 'password' in d:
             del d['password']
+        if 'amenities' in d:
+            d['amenities'] = [amenity.to_dict() for amenity in d['amenities']]
         return d
 
     def delete(self):

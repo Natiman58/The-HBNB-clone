@@ -48,11 +48,14 @@ def get_places_by_JSON_request_body():
         if city:
             places.extend(city.places)
     if amenity_ids:
-        places = [place for place in places if all(amenity_id in places.amenity_id for amenity_id in amenity_ids)]
-
-    place_dict = [place.to_dict() for place in places]
-
-    return jsonify(place_dict), 200
+        places = [place for place in places if all(amenity_id in [amenity.id for amenity in place.amenities] for amenity_id in amenity_ids)]
+        place_dict = [place.to_dict() for place in places]
+        print(len(place_dict))
+        return jsonify(place_dict), 200
+    else:
+        places = [place.to_dict() for place in places]
+        print(len(places))
+        return jsonify(places), 200
 
 @app_views.route('/places/<place_id>', methods=['DELETE'], strict_slashes=False)
 def delete_places_by_place_id(place_id):
