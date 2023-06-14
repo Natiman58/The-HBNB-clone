@@ -86,8 +86,8 @@ article {
 
 .number_bathrooms {
     display: flex;
-    width: 100px;
-    height: 100%;
+    width: auto;
+    height: auto;
     margin: auto;
     background: url(../images/icon_bath.png) no-repeat center center;
 }

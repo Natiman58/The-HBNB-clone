@@ -29,7 +29,7 @@ def get_places_by_place_id(place_id):
 def get_places_by_JSON_request_body():
     data = request.get_json()
     if not data:
-        return jsonify({'Not a JSON'}), 400
+        return jsonify({'Error': 'Not a JSON'}), 400
 
     state_ids = data.get('states', [])
     city_ids = data.get('cities', [])
