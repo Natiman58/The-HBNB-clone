@@ -64,10 +64,27 @@ h3 {
 h4 {
     font-weight: 400;
     font-size: 14px;
-    margin-top: -12px;
-    margin-left: 50px;
     position: absolute;
-    width: 40%;
+    top: 13px;
+    left: 49px;
+    width: 16%;
+}
+#amenities_header {
+    font-weight: 400;
+    font-size: 14px;
+    position: absolute;
+    left: 31%;
+    top: 30px;
+    width: 33%;
+}
+h5 {
+    /* color: red; */
+    position: absolute;
+    left: 9%;
+    width: 10%;
+    top: 29px;
+    height: 20px;
+    font: inherit;
 }
 .popover {
     font-size: larger;
@@ -85,7 +102,7 @@ h4 {
     border: 1px solid #DDDDDD;
 
     overflow-y: scroll;
-    max-height: 30px;
+    max-height: 300px;
 
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
@@ -102,6 +119,16 @@ h4 {
 .amenity-checkbox {
     position: absolute;
     left: 10px;
+}
+
+.state-checkbox {
+    position: absolute;
+    left: 10px;
+}
+
+.city-checkbox {
+    position: absolute;
+    left: 54px;
 }
 
 .places {
@@ -210,5 +237,13 @@ ul {
         margin-left: 20px;
         position: absolute;
         width: 39%;
+    }
+    #amenities_header {
+        font-weight: 400;
+        font-size: 14px;
+        position: absolute;
+        left: 31%;
+        top: 30px;
+        width: 33%;
     }
 }
