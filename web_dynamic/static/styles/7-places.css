@@ -110,3 +110,29 @@ article {
     font-size: initial;
     text-align: initial;
 }
+
+span {
+    position: absolute;
+    left: 43%;
+    font-size: x-small;
+    width: 20%;
+    top: 15%;
+    font-weight: 500;
+    left: 34%;
+}
+
+.show-review-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #333;
+    width: auto;
+    height: auto;
+    top: 10px;
+}
+.show-review-button:hover {
+    opacity: 80%;
+}

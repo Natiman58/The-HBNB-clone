@@ -27,6 +27,7 @@
     border-radius: 4px;
     margin: auto;
     margin-right: 30px;
+    cursor: pointer;
 }
 .button:hover {
     opacity: 90%;
@@ -47,11 +48,13 @@
 }
 
 article>h2 {
+    /* color: red; */
+    position: relative;
     font-size: 30px;
     display: flex;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
-    margin: 0;
+    margin: 0px;
     padding-bottom: 10%;
 }
 
