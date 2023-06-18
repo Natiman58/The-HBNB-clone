@@ -131,8 +131,28 @@ span {
     color: #333;
     width: auto;
     height: auto;
-    top: 10px;
+    top: 12px;
+    left: 50%;
 }
 .show-review-button:hover {
-    opacity: 80%;
+    opacity: 70%;
+}
+
+.reviews_section {
+    text-align: left;
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0%;
+}
+
+.review-text {
+    /* color: red; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: large;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
 }

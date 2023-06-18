@@ -144,12 +144,36 @@ $(document).ready(function() {
 
         // Reviews
         var reviewsToggle = $('<span></span>').addClass('show-review-button').text('Show');
-        var h2Reviews = $('<h2></h2>').text('Reviews: ').append(reviewsToggle)
+        var h2Reviews = $('<h2></h2>').text('Reviews: ')
+        var reviewText = $('<div></div>').addClass('review-text').text('this is the lol review...lol')
 
-        article.append(placeName, pricePerNight, information, description, h2Reviews)
+        // the review section
+        var reviews = $('<div class="reviews_section"></div>').append(h2Reviews, reviewsToggle, reviewText)
+
+         // Hide the review dropdown content by default
+        reviewText.hide();
+
+        article.append(placeName, pricePerNight, information, description, reviews)
 
         return article;
 };
+
+    // Add click event listner to the show review button
+    $(document).on('click', '.show-review-button', function() {
+        var article = $(this).closest('article');
+        var reviewSection = article.find('.review-text');
+
+        // Toggle the visibility of dropdown content
+        reviewSection.toggle();
+
+        // Update the button text
+        var buttonText = $(this).text();
+        if (buttonText === 'Show') {
+          $(this).text('Hide');
+        } else {
+          $(this).text('Show');
+        }
+      });
 
     // A function to send a POST request to places_search
     function searchPlaces(amenityIds, cityIds, stateIds) {
@@ -187,7 +211,7 @@ $(document).ready(function() {
           });
     }
 
-    // Button click to send a POST request
+    // Search Button click to send a POST request
     $('.button').click(function() {
         // Get the list of checked amenities
         var checkedAmenities = $('.amenity-checkbox:checked');
@@ -219,16 +243,4 @@ $(document).ready(function() {
         // make the search request with list of checked amenities, cities and states
         searchPlaces(amenityIds, cityIds, stateIds);
     });
-
-    // Review-toggle functionality
-    $('.show-review-button').click(function() {
-        var reviewsContainer = $(this).siblings('.h2Reviews');
-
-        if (reviewsContainer.is(':visible')) {
-            $(this).text('Show Reviews');
-        } else {
-            reviewsContainer.show();
-            $(this).text('Hide Reviews')
-        }
-    })
 });
