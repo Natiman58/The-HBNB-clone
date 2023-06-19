@@ -11,7 +11,7 @@ from models.user import User
 from models import storage
 
 
-@app_views.route('/places/<place_id>/reviews', methods=['GET'], strict_slashes=False)
+@app_views.route('/places/<place_id>/reviews', methods=['GET', 'POST'], strict_slashes=False)
 def get_reviews_by_place_id(place_id):
     place = storage.get(Place, place_id)
     if not place:
