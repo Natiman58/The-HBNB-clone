@@ -39,7 +39,6 @@ def hbnb_filters():
     for place in places:
         reviews = sorted(place.reviews, key=lambda review: review.place_id)
         review_by_place[place.id] = reviews
-    print(review_by_place)
     return render_template('101-hbnb.html',
                            states=states,
                            cities=cities,

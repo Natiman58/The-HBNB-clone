@@ -152,7 +152,7 @@ span {
     flex-direction: column;
     text-align: left;
     word-wrap: break-word;
-    font-size: large;
+    font-size: initial;
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
 }

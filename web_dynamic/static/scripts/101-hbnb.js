@@ -113,10 +113,8 @@ $(document).ready(function() {
         }
     };
 
-
     // create an article for each place function
     function createPlaceArticle(place) {
-        console.log(place)
 
         var article = $('<article></article>');
 
@@ -147,29 +145,42 @@ $(document).ready(function() {
         var reviewsToggle = $('<span></span>').addClass('show-review-button').text('Show');
         var h2Reviews = $('<h2></h2>').text('Reviews: ')
         var reviewText = $('<div></div>').addClass('review-text');
-
-        console.log(place)
-
-        if (place.reviews && place.reviews.length > 0) {
-
-            place.reviews.forEach(function (review) {
-              var reviewParagraph = $('<p></p>').text(review.text);
-              reviewText.append(reviewParagraph);
-            });
-          } else {
-            reviewText.text('No reviews available');
-          }
-
         // the review section
-        var reviews = $('<div class="reviews_section"></div>').append(h2Reviews, reviewsToggle, reviewText)
+        var reviews = $('<div class="reviews_section"></div>').append(h2Reviews, reviewsToggle)
+
+        // Get request for place reviews by place id
+        function getReviewText(placeId) {
+            var reviewApi = "http://127.0.0.1:5001/api/v1/places/" + placeId + "/reviews";
+            $.ajax({
+            url: reviewApi,
+            type: 'GET',
+            dataType: 'json',
+            async: false,
+            success: function(response) {
+                if (response && response.length > 0) {
+                response.forEach(function(review) {
+                    var reviewParagraph = $('<p></p>').html(review.text);
+                    reviewText.append(reviewParagraph);
+                });
+                } else {
+                reviewText.text('No reviews available');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('Error:', error);
+            }
+            });
+        }
+
+        getReviewText(place.id)
 
          // Hide the review dropdown content by default
         reviewText.hide();
 
-        article.append(placeName, pricePerNight, information, description, reviews)
-
+        article.append(placeName, pricePerNight, information, description, reviews, reviewText)
         return article;
-};
+    };
+
 
     // Add click event listner to the show review button on the loaded document
     $(document).on('click', '.show-review-button', function() {
