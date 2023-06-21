@@ -77,14 +77,14 @@ h4 {
     font-size: 14px;
     position: absolute;
     left: 31%;
-    top: 30px;
+    top: 32px;
     width: 33%;
 }
 h5 {
     /* color: red; */
     position: absolute;
     left: 9%;
-    width: 10%;
+    width: 15%;
     top: 29px;
     height: 20px;
     font: inherit;
@@ -181,13 +181,14 @@ ul {
 }
 
 
-@media (max-width: 600px) {
+/* For mobile devices */
+@media (max-width: 767px) {
     header {
         padding-left: 10%;
     }
-    .container {
-        padding-left: 5%;
-        overflow-x: hidden;
+    b {
+        font-size: 12px;
+        word-wrap: break-word;
     }
     .filters {
         width: 90%;
@@ -211,8 +212,8 @@ ul {
     .popover ul {
         margin-top: 15px;
         margin-bottom: 15px;
-        margin-left: -56%;
-        text-align: center;
+        margin-left: -33px;
+        word-wrap: break-word;
     }
     h3 {
         font-weight: 600;
@@ -223,6 +224,8 @@ ul {
     .amenity-checkbox {
         position: absolute;
         left: 0px;
+        width: 10px;
+        height: 10px;
     }
     .popover li {
         margin-top: 10px;
@@ -243,10 +246,12 @@ ul {
     }
     #amenities_header {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 12px;
         position: absolute;
         left: 31%;
-        top: 30px;
+        top: 27px;
         width: 33%;
+        max-height: -webkit-fill-available;
+        word-wrap: break-word;
     }
 }

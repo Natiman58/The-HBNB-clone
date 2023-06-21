@@ -159,3 +159,51 @@ span {
 .review-text.hide {
     max-height: 0;
 }
+
+/* For mobile devices */
+@media (max-width: 767px){
+    .show-review-button {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        color: #333;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 12px;
+        left: 50%;
+    }
+
+    .filters {
+        width: 90%;
+        height: 70px;
+        color: white;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        display: flex;
+        position: absolute;
+        left: 10%;
+    }
+    .places h1 {
+        width: 90%;
+        position: relative;
+        top: 40px;
+        height: -webkit-fill-available;
+    }
+    .state-checkbox {
+        position: absolute;
+        left: -2px;
+        width: 10px;
+        height: 10px;
+    }
+    .city-checkbox {
+        position: absolute;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+    }
+
+}
