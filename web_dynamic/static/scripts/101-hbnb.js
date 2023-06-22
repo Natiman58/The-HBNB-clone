@@ -67,10 +67,10 @@ $(document).ready(function() {
         //    selectedLocations.push('City:' + cityName);
         //});
 
-        if (selectedLocations.length > 0 && selectedLocations.length < 4) {
+        if (selectedLocations.length > 0 && selectedLocations.length < 3) {
             $('.locations h4').text(selectedLocations.join(', '));
-          } else if (selectedLocations.length >= 4) {
-            var truncatedText = selectedLocations.slice(0, 3).join(', ') + ' ...';
+          } else if (selectedLocations.length >= 3) {
+            var truncatedText = selectedLocations.slice(0, 2).join(', ') + ' ...';
             $('.locations h4').text(truncatedText);
           } else {
             $('.locations h4').text('');

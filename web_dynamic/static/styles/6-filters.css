@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .container {
     background-color: white;
     max-width: 1000px;
@@ -86,8 +90,10 @@ h5 {
     left: 9%;
     width: 15%;
     top: 29px;
-    height: 20px;
-    font: inherit;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 3%;
 }
 .popover {
     font-size: larger;
@@ -181,11 +187,12 @@ ul {
 }
 
 
-/* For mobile devices */
-@media (max-width: 767px) {
+/* For medium sized mobile devices */
+@media (min-width: 300px) and (max-width: 767px) {
     header {
         padding-left: 10%;
     }
+
     b {
         font-size: 12px;
         word-wrap: break-word;
@@ -197,10 +204,11 @@ ul {
         border: 1px solid #DDDDDD;
         border-radius: 4px;
         display: flex;
-        position: relative;
+        position: absolute;
+        left: 5%;
     }
     .popover {
-        width: 23%;
+        width: 25%;
         height: 50%;
         font-size: 15px;
         display: none;
@@ -231,22 +239,150 @@ ul {
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 14px;
-        margin-left: 10%;
+        margin-left: 8%;
     }
     .amenities .popover {
         width: 40%;
     }
     h4 {
         font-weight: 400;
-        font-size: 14px;
-        margin-top: -12px;
-        margin-left: 20px;
+        font-size: 12px;
+        margin-top: 13px;
+        margin-left: -29px;
         position: absolute;
-        width: 39%;
+        width: 15%;
     }
     #amenities_header {
         font-weight: 400;
         font-size: 12px;
+        position: absolute;
+        left: 31%;
+        top: 27px;
+        width: 33%;
+        max-height: -webkit-fill-available;
+        word-wrap: break-word;
+    }
+}
+
+/* For extra smaller devices 600px and below */
+@media only screen and (max-width: 300px) {
+    h3 {
+        margin-left: 5px;
+    }
+    .filters {
+        width: 90%;
+        margin-left: 14px;
+    }
+    .button {
+        font: 18px;
+        background-color: #FF5A5F;
+        color: #FFFFFF;
+        height: 40px;
+        width: 55px;
+        border: 0;
+        border-radius: 4px;
+        margin-left: 35px;
+        margin-top: 13px;
+        margin-right: 13px;
+        cursor: pointer;
+    }
+    .popover {
+        font-size: 13px;
+        margin-top: 23px;
+        padding-top: 3px;
+        background-color: #FAFAFA;
+        color: black;
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 67%;
+        min-width: 11.8%;
+        min-height: 15em;
+        border: 1px solid #DDDDDD;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        max-height: 300px;
+        animation: growDown 300ms ease-in-out forwards;
+        transform-origin: top center;
+    }
+
+}
+
+/* For Tablet devices */
+@media (min-width: 768px) {
+    header {
+        padding-left: 10%;
+    }
+    b {
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+    .filters {
+        width: 90%;
+        height: 70px;
+        color: white;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        display: flex;
+        position: relative;
+    }
+    .popover {
+        width: 25%;
+        height: 50%;
+        font-size: 15px;
+        display: none;
+        flex-direction: column;
+        overflow-x: hidden;
+        padding-left: 2%;
+    }
+
+    .popover ul {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: -10px;
+        word-wrap: break-word;
+    }
+    h3 {
+        font-weight: 600;
+        margin-top: 10px;
+        margin-left: 15px;
+        text-align: left;
+    }
+    .amenity-checkbox {
+        position: absolute;
+        left: 5px;
+        width: 14px;
+        height: 14px;
+    }
+    .popover li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        margin-left: 15px;
+    }
+
+    h4 {
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 15px;
+        left: 36px;
+        position: absolute;
+        width: 19%;
+    }
+    h5 {
+        /* color: red; */
+        position: absolute;
+        left: 8%;
+        width: 17%;
+        top: 20px;
+        height: 20px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+    #amenities_header {
+        font-weight: 400;
+        font-size: 15px;
         position: absolute;
         left: 31%;
         top: 27px;
