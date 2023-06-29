@@ -1,0 +1,14 @@
+python3==3.9.6
+pip==3.11
+Flask==2.2.3
+SQLAlchemy==2.0.13
+MySQLdb==1.4.5
+Jinja2==3.1.2
+Fabric3==1.14.pos1
+flasgger==0.9.7.1
+bcrypt==4.0.1
+Flask-Caching==2.0.2
+Flask-Cors==3.0.8
+Flask-JWT-Extended==4.4.4
+Flask-Session==0.4.0
+Flask-SocketIO==5.3.2
