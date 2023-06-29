@@ -1,6 +1,9 @@
 # The AirBnB clone
 
 ![Screenshot 2023-06-29 at 1 46 26 PM](https://github.com/Natiman58/my_airbnb_v4/assets/99422296/942d1d64-dd18-44d6-968c-b462d2915446)
+# [Demo video](https://drive.google.com/file/d/1K0qgJUdL03IgYvXO5Yu-CX7JthJYwTZb/view?usp=sharing)
+
+Clone the repo and you are good to go!!
 
 * The shell works in an interactive mode:
 
@@ -286,6 +289,7 @@
               curl -X DELETE http://0.0.0.0:5000/api/v1/amenities/amenity_id
               curl -X POST http://0.0.0.0:5000/api/v1/amenities
               curl -X PUT http://0.0.0.0:5000/api/v1/amenities/amenity_id
+
 
 
 
