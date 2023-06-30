@@ -3,7 +3,20 @@
 ![Screenshot 2023-06-29 at 1 46 26 PM](https://github.com/Natiman58/my_airbnb_v4/assets/99422296/942d1d64-dd18-44d6-968c-b462d2915446)
 # [Demo video](https://drive.google.com/file/d/1K0qgJUdL03IgYvXO5Yu-CX7JthJYwTZb/view?usp=sharing)
 
-Clone the repo and you are good to go!!
+Step-1: Clone the repo
+      
+      run the scripts on different terminals:
+            
+            terminal-1 ./101-hbnb_script.sh  # starts the front-end on route /101-hbnb
+            terminal-2 ./api-run_script.sh   # starts the api-server
+      
+Step-2: then go to the [link](http://127.0.0.1:5000/101-hbnb) to see the page
+
+Setp-3: you can test the apis on http://127.0.0.1:5001/api/v1/users and the other endpoints mentioned below; RESTFul API section
+
+then you are all set 👍.
+
+# About the console
 
 * The shell works in an interactive mode:
 
@@ -291,9 +304,4 @@ Clone the repo and you are good to go!!
               curl -X PUT http://0.0.0.0:5000/api/v1/amenities/amenity_id
 
 
-
-
-
-
-              
-            
+# Enjoy 🧑‍💻🎉
